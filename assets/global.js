@@ -931,7 +931,6 @@ class VariantSelects extends HTMLElement {
       this.updateShareUrl();
     }
   }
-
   updateOptions() {
     this.options = Array.from(
       this.querySelectorAll("select"),

@@ -1,0 +1,123 @@
+* {
+  min-width: 0;
+  min-height: 0;
+}
+.row {
+  display: flex;
+}
+.preview {
+  margin-top: 8px;
+}
+.thumb {
+  padding: 0 2px;
+  max-width: 18%;
+}
+.product-info h1,
+.product-info p {
+  line-height: 1.2;
+}
+.product-headline {
+  font-size: 36px;
+}
+.product-headline span {
+  color: #0088e2;
+}
+.price {
+  font-size: 30px;
+}
+.current {
+  font-weight: 700;
+}
+.old {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+.sale-tag {
+  padding: 2px 30px;
+  margin-left: 10px;
+  border-radius: 30px;
+  background-color: #009dc8;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+.bundle-label {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  color: #000;
+}
+.saving-bundles {
+  padding-bottom: 20px;
+}
+.saving-bundle {
+  border: 2px solid #d7d7d7;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  padding: 17px 10px;
+  max-width: 174px;
+  cursor: pointer;
+  width: 100%;
+  background-color: #fff;
+}
+.saving-bundle div {
+  line-height: 1.2;
+}
+.saving-bundle div:nth-child(2) {
+  font-size: 20px;
+  font-weight: 700;
+}
+.saving-bundle div:first-child {
+  font-size: 10px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2e294e;
+  border: 1px solid #2e294e;
+  border-radius: 30px;
+  position: absolute;
+  top: -7px;
+  left: -8px;
+  padding: 10px 6px;
+  text-transform: uppercase;
+  font-style: italic;
+  line-height: 1;
+  transform: rotate(-21deg);
+}
+.saving-bundle div:first-child span {
+  font-size: 15px;
+  font-weight: 700;
+  display: block;
+}
+.saving-bundle div:nth-child(5) {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  background-color: #2e294e;
+  border-radius: 4px;
+  padding: 6px;
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 110px;
+  color: #fff;
+}
+.saving-bundle2 {
+  margin: 0px 10px;
+}
+@media screen and (min-width: 750px) {
+  .product-gallery {
+    flex: 0 0 50%;
+  }
+  .product-main {
+    gap: 50px;
+  }
+  .product-info {
+    flex: 0 0 calc(100% - 650px);
+  }
+}

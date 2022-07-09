@@ -1,0 +1,88 @@
+<section>
+{{ "section-product01.css" | asset_url | stylesheet_tag }}
+
+  <div class="container">
+    <div class="product-main row">
+      <div class="product-gallery">
+        <div class="slider product-img">
+          {% for image in product.images %}
+          <img class="" src="{{ image | img_url: 'master' }}">
+          {% endfor %}
+        </div>
+        <div class="preview">
+          {% for image in product.images %}
+            <div class="thumb">
+            <img class="" src="{{ image | img_url: 'master' }}">
+          </div>
+            {% endfor %}
+        </div>
+      </div>
+      <div class="product-info">
+        {%- assign product_form_id = 'product-form-' | append: section.id -%}
+        <h1 class="product-headline">A Single Mini-unit Device That <span>Stimulates Away</span> All Your Pain In Minutes.</h1>
+        <div>{{product.metafields.custom.product_subtitle}}</div>
+        <div class="price">
+          <div class="current">{{ product.price | money }}</div>
+          <div class="old">{{ product.compare_at_price | money }}</div>
+          <div class="sale-tag">SALE</div>
+        </div>
+
+        <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+          {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+        </div>
+        <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+         
+                  {%- for option in product.options_with_values -%}
+                    {% if option.name contains 'Bundle' %}
+                      <fieldset class="js product-form__input saving-bundles">
+                        <legend class="bundle-label">Bundle & Save</legend>
+                        <div class="row">
+                            
+                          {%- for value in option.values -%}
+                          <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                name="{{ option.name }}"
+                                value="{{ value | escape }}"
+                                form="{{ product_form_id }}"
+                                {% if option.selected_value == value %}checked{% endif %}
+                          > 
+               
+                          	{% if value contains 1 %}
+                          <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"class="saving-bundle saving-bundle1">
+                          	  <div>SAVE<span>30%</span></div>
+                          	  <div>1 SET</div>
+                          	  <div>Single</div>
+                          	  <div>{{ product.variants[0].price | money }}</div>
+                              </label>
+                          	{% elsif value contains 2 %}
+                            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"class="saving-bundle saving-bundle2">
+                          	  <div>SAVE<span>30%</span></div>
+                          	  <div>2 SETS</div>
+                          	  <div>Couple Bundle</div>
+                          	  <div>{{ product.variants[1].price | money }}</div>
+                          	  <div>BEST SELLER</div>
+                          	</label>
+                          	{% elsif value contains 3 %}
+                          	<label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"class="saving-bundle saving-bundle3">
+                          	  <div>SAVE<span>30%</span></div>
+                          	  <div>3 SETS</div>
+                          	  <div>Family Bundle</div>
+                          	  <div>{{ product.variants[2].price | money }}</div>
+                          	  <div>BEST DEAL </div>
+                             
+                          	</label>
+                          	{% endif %}
+                          {%- endfor -%}
+                   
+                        </div>
+                      </fieldset>
+                    {% endif %}
+                
+                  {% endfor %}
+                  <script type="application/json">
+                    {{ product.variants | json }}
+                  </script>
+                </variant-radios>
+      </div>
+    </div>
+  </div>
+</section>

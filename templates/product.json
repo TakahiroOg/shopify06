@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "default-product",
+      "type": "product01",
       "settings": {}
     }
   },

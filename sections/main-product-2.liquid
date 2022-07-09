@@ -33,43 +33,6 @@
         </div>
         <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
           {%- for option in product.options_with_values -%}
-              <fieldset class="js product-form__input">
-                <legend class="form__label">{{ option.name }}: <span class="option">{{ option.selected_value }}</span></legend>
-                {%- for value in option.values -%}
-                  <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                        name="{{ option.name }}"
-                        value="{{ value | escape }}"
-                        form="{{ product_form_id }}"
-                        {% if option.selected_value == value %}checked{% endif %}
-                  >
-                    {% assign variant_needed = null %}
-                    {% for variant in product.variants %}
-                    {% if variant.options contains value %}
-                    {% assign variant_needed = variant %}
-                    {% endif %}
-                    {% endfor %}
-                    {% if variant_needed.metafields.color.swatch and option.name == "Color" %}
-                    <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-color: {{variant_needed.metafields.color.swatch}}">
-                    &nbsp
-                    </label>
-                    {% elsif variant_needed.metafields.image.swatch and option.name == "Color" %}
-                    <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-size: cover; background-image: url('{{variant_needed.metafields.image.swatch}}')">
-                    &nbsp
-                    </label>
-                    {% else %}
-                    <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                    {{ value }}
-                    </label>
-                    {% endif %}
-                {%- endfor -%}
-              </fieldset>
-          {%- endfor -%}
-          <script type="application/json">
-            {{ product.variants | json }}
-          </script>
-        </variant-radios>
-        {% comment %} <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
-          {%- for option in product.options_with_values -%}
             {% if option.name contains 'Bundle' %}
               <fieldset class="js product-form__input saving-bundles">
                 <legend class="bundle-label">Bundle & Save</legend>
@@ -114,7 +77,7 @@
           <script type="application/json">
             {{ product.variants | json }}
           </script>
-        </variant-radios> {% endcomment %}
+        </variant-radios>
 
           <div class="cta">
             <div class="cta-button">

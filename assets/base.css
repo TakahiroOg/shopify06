@@ -1432,7 +1432,8 @@ button.shopify-payment-button__button--unbranded {
   width: 100%;
 }
 
-.button.loading {
+.button.loading,
+.get-btn.loading {
   color: transparent;
   position: relative;
 }
@@ -1443,7 +1444,7 @@ button.shopify-payment-button__button--unbranded {
   }
 }
 
-.button.loading > .loading-overlay__spinner {
+.loading > .loading-overlay__spinner {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -2975,4 +2976,9 @@ img {
   padding: 12px 30px;
   border-radius: 5px;
   text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.get-btn {
+  position: relative;
 }

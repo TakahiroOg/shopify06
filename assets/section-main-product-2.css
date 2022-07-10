@@ -12,6 +12,27 @@
   padding: 0 2px;
   max-width: 18%;
 }
+.slick-arrow {
+  z-index: 20;
+}
+.slick-arrow:before {
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  content: " ";
+  line-height: 1;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 0;
+}
+.slick-prev.slick-arrow::before {
+  background-image: url(arrow-left.png);
+  left: 0;
+}
+.slick-next.slick-arrow::before {
+  background-image: url(arrow-right.png);
+  right: 0;
+}
 .product-info h1,
 .product-info p {
   line-height: 1.2;
@@ -28,7 +49,6 @@
   margin-bottom: 15px;
   font-size: 30px;
 }
-
 .price > * {
   display: inline-block;
   vertical-align: middle;

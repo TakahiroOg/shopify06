@@ -924,7 +924,7 @@ class VariantSelects extends HTMLElement {
       this.toggleAddButton(true, "", true);
       this.setUnavailable();
     } else {
-     // this.updateMedia();
+      this.updateMedia();
       this.updateURL();
       this.updateVariantInput();
       this.renderProductInfo();
@@ -948,27 +948,32 @@ class VariantSelects extends HTMLElement {
     });
   }
 
-//   updateMedia() {
-//     if (!this.currentVariant) return;
-//     if (!this.currentVariant.featured_media) return;
+  updateMedia() {
+    if (!this.currentVariant) return;
+    if (!this.currentVariant.featured_media) return;
+    var current_media_id = this.currentVariant.featured_media.id;
+    console.log(current_media_id);
+    var media_len = document.querySelector(".slick-track").childElementCount;
+    const media_id_array = [];
 
-//     const mediaGallery = document.getElementById(
-//       `MediaGallery-${this.dataset.section}`
-//     );
-//     mediaGallery.setActiveMedia(
-//       `${this.dataset.section}-${this.currentVariant.featured_media.id}`,
-//       true
-//     );
-
-//     const modalContent = document.querySelector(
-//       `#ProductModal-${this.dataset.section} .product-media-modal__content`
-//     );
-//     if (!modalContent) return;
-//     const newMediaModal = modalContent.querySelector(
-//       `[data-media-id="${this.currentVariant.featured_media.id}"]`
-//     );
-//     modalContent.prepend(newMediaModal);
-//   }
+    for (let i = 1; i < media_len; i++) {
+      media_id_array.push(
+        parseInt(
+          document
+            .querySelector(".slick-track")
+            .querySelectorAll(".product__media-item")
+            [i].getAttribute("data-media-id")
+        )
+      );
+    }
+    console.log(this.currentVariant);
+    console.log(media_id_array.indexOf(current_media_id));
+    $(".product-img").slick(
+      "slickGoTo",
+      media_id_array.indexOf(current_media_id),
+      true
+    );
+  }
 
   updateURL() {
     if (!this.currentVariant || this.dataset.updateUrl === "false") return;
@@ -1121,6 +1126,7 @@ $(document).ready(function () {
     slidesToShow: 6,
     slidesToScroll: 1,
     asNavFor: ".product-img",
+    arrows: false,
     focusOnSelect: true,
   });
 });

@@ -9,23 +9,41 @@
         <h1 class="product-headline">{{product.metafields.custom.headline}}</h1>
       </div>
       <div class="product-gallery">
+        <media-gallery id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
+          <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
+          {%- liquid
+            assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
+            assign media_count = product.media.size
+            if section.settings.hide_variants and media_count > 1
+              assign media_count = media_count | minus: variant_images.size | plus: 1
+            endif
+          -%}
         <div class="slider product-img">
-          {% if product.metafields.custom.cover_image %}
-            <img src="{{ product.metafields.custom.cover_image | img_url: 'master' }}" loading="lazy">
-          {% endif %}
-          {% for image in product.images %}
-          <img src="{{ image | img_url: 'master' }}" loading="lazy">
-          {% endfor %}
+          {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'  -%}
+          {%- for media in product.media -%}
+            {%- liquid
+                if variant_images contains media.src
+                  assign variant_image = true
+                else
+                  assign variant_image = false
+                endif
+            -%}
+          <div id="Slide-{{ section.id }}-{{ media.id }}" class="product__media-item grid__item slider__slide {% if variant_image %}hide-variant{% endif %}" data-media-id="{{ media.id }}">
+            <img src="{{ media | img_url: 'master' }}" loading="lazy">
+        </div>
+      {%- endfor -%}
         </div>
         <div class="preview">
-          {% if product.metafields.custom.cover_image %}
+          {% for media in product.media %}
+            {%- liquid
+                if variant_images contains media.src
+                  assign variant_image = true
+                else
+                  assign variant_image = false
+                endif
+            -%}
             <div class="thumb">
-            <img src="{{ product.metafields.custom.cover_image | img_url: 'master' }}" loading="lazy">
-            </div>
-          {% endif %}
-          {% for image in product.images %}
-            <div class="thumb">
-             <img src="{{ image | img_url: 'master' }}" loading="lazy">
+             <img src="{{ media | img_url: 'master' }}" loading="lazy">
             </div>
           {% endfor %}
         </div>
@@ -74,7 +92,6 @@
                       <div>Family Bundle</div>
                       <div>{{ product.variants[2].price | money }}</div>
                       <div>BEST DEAL </div>
-                      
                     </label>
                     {% endif %}
                   {%- endfor -%}
@@ -110,14 +127,26 @@
           </div>
           <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
           </div>
-          <div class="b-safe-checkout">
-            <div class="flex-row-center secure-text" style="padding-left:10px;">
-                <img class ="lock-icon" src="https://cdn.shopify.com/s/files/1/0555/1774/1228/files/bxs_lock.png?v=1656162380">
-              <span class="safe-checkout">GUARANTEED SAFE CHECKOUT</span>
+            <div class="b-safe-checkout">
+              <div class="flex-row-center secure-text" style="padding-left:10px;">
+                  <img class ="lock-icon" src="https://cdn.shopify.com/s/files/1/0555/1774/1228/files/bxs_lock.png?v=1656162380">
+                <span class="safe-checkout">GUARANTEED SAFE CHECKOUT</span>
+              </div>
+                <img class="payment-logos" src="https://cdn.shopify.com/s/files/1/0555/1774/1228/files/payment-logo.png?v=1655214307">
             </div>
-              <img class="payment-logos" src="https://cdn.shopify.com/s/files/1/0555/1774/1228/files/payment-logo.png?v=1655214307">
           </div>
+
+          <div class="review-card row">
+            <div class="review-img">
+              <img src="{{ '3.jpeg' | asset_url }}" alt="">
+            </div>
+            <div class="review-content">
+              <span class="review">{{ product.metafields.custom.review }}</span>
+              <strong class="name">Walter C.</strong>
+              <strong class="verify">Verified Buyer</strong>
+            </div>
           </div>
+
         </div>
       </div>
     </div>

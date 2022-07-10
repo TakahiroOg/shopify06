@@ -413,6 +413,7 @@ h5,
 h1,
 .h1 {
   font-size: calc(var(--font-heading-scale) * 3rem);
+  margin: 0 0 20px;
 }
 
 @media only screen and (min-width: 750px) {
@@ -2750,8 +2751,14 @@ details-disclosure > details {
   border: 1px solid #009dc8;
   color: #fff;
   font-weight: 500;
+  line-height: 1.2;
 }
-
+@media screen and (max-width: 749px) {
+  .badge {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+}
 .gradient {
   background: rgb(var(--color-background));
   background: var(--gradient-background);
@@ -2978,6 +2985,7 @@ img {
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
+  box-shadow: 0px 0px 13px -2px #00c065;
 }
 .get-btn {
   position: relative;

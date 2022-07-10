@@ -8,32 +8,16 @@
     "165747575581a00aed": {
       "type": "image-with-text",
       "blocks": {
-        "1657475754c396529e-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
         "1657475754c396529e-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>This New 5-in-1 Whole Body Therapyhelps relieve your neck \/ back waist \/ hip \/ leg and even other parts.Exactly how?It uses<em>4<\/em>different types of massage techniques:shiatsu, kneading, tapping, massage.FREE delivery today only!Relieves muscle pain and inflammation.Extremely effective solution for osteoarthritis.Healthier legs in just 30 days or your money back. No questions asked.<\/p>",
             "text_style": "body"
-          }
-        },
-        "1657475754c396529e-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": ""
           }
         }
       },
       "block_order": [
-        "1657475754c396529e-0",
-        "1657475754c396529e-1",
-        "1657475754c396529e-2"
+        "1657475754c396529e-1"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/2.gif",

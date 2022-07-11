@@ -31,7 +31,7 @@
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
-        "big_header": false,
+        "big_header": true,
         "mobile_reverse": false,
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",

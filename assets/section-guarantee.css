@@ -9,6 +9,7 @@
 .gt-badge_inner {
   max-width: 160px;
   margin: auto;
+  text-align: center;
 }
 .gt-desc {
   line-height: 1.25;
@@ -45,9 +46,6 @@
   }
   .gt-header {
     text-align: center;
-  }
-  .gt-badge img {
-    max-width: 100px;
   }
   .product-guarantee {
     padding-bottom: 0;

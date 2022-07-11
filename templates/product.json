@@ -72,7 +72,8 @@
     "guarantee": {
       "type": "guarantee",
       "settings": {
-        "gt_image": "shopify:\/\/shop_images\/2.jpg"
+        "gt_image": "shopify:\/\/shop_images\/2.jpg",
+        "gt-badge": "shopify:\/\/shop_images\/gt-badge_2-min.png"
       }
     }
   },

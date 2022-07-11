@@ -5,11 +5,13 @@
     <div class="container">
       <div class="product-guarantee">
         <div class="gt-badge">
-          <img src="{{ section.settings.gt-badge | image_url: width: 600 }}" alt="" class="badge-icon">
+          <div class="gt-badge_inner">
+           <img src="{{ section.settings.gt-badge | image_url: width: 600 }}" alt="" class="badge-icon">
+          </div>
         </div>
         <div class="gt-content">
           <h2 class="gt-header">60 DAY MONEY BACK GUARANTEE</h2>
-          <p class="gt-desc">{{ section.settings.gt-description }}</p>
+          <div class="gt-desc">{{ section.settings.gt-description }}</div>
           <div class="cta">
             <div class="cta-button">
               <div {{ block.shopify_attributes }}>

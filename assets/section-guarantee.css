@@ -3,9 +3,11 @@
   margin-top: 20px;
   position: relative;
 }
-.gt-badge img {
+.gt-badge {
+  padding: 15px;
+}
+.gt-badge_inner {
   max-width: 160px;
-  display: block;
   margin: auto;
 }
 .gt-desc {

@@ -83,7 +83,8 @@
       "type": "guarantee",
       "settings": {
         "gt_image": "shopify:\/\/shop_images\/2.jpg",
-        "gt-badge": "shopify:\/\/shop_images\/gt-badge_2-min.png"
+        "gt-badge": "shopify:\/\/shop_images\/gt-badge_2-min.png",
+        "gt-description": "<p>We stand behind the effectiveness of this product that's why we're giving you the chance to try it risk-free for the next 60 days. You're going to love how the treated area feels after each session, or you get your money back. Other than those aches and pains that you've been dealing with, you have nothing to lose by trying this product.<\/p>"
       }
     }
   },

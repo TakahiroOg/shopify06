@@ -8,6 +8,12 @@
     "165747575581a00aed": {
       "type": "image-with-text",
       "blocks": {
+        "c64ab016-c053-4af8-8bba-f1456135989b": {
+          "type": "heading",
+          "settings": {
+            "heading": "Powerful Personalized Relief"
+          }
+        },
         "1657475754c396529e-1": {
           "type": "text",
           "settings": {
@@ -17,6 +23,7 @@
         }
       },
       "block_order": [
+        "c64ab016-c053-4af8-8bba-f1456135989b",
         "1657475754c396529e-1"
       ],
       "settings": {
@@ -24,6 +31,8 @@
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
+        "big_header": false,
+        "mobile_reverse": false,
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -59,6 +68,8 @@
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
+        "big_header": false,
+        "mobile_reverse": false,
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",

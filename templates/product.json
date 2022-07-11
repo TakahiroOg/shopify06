@@ -11,7 +11,7 @@
         "1657475754c396529e-1": {
           "type": "text",
           "settings": {
-            "text": "<p>&lt;div&gt;{{ product.metafields.custom.paragraph_1 | metafield_tag }}&lt;\/div&gt;<\/p>",
+            "text": "<p>&lt;div style=\"color:blue\"&gt;{{ product.metafields.custom.paragraph_1 | metafield_tag }}&lt;\/div&gt;<\/p>",
             "text_style": "body"
           }
         }

@@ -54,7 +54,7 @@
         "1657510078e5c262af-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text"
+            "heading": "Get Instant Relief With The Whole Body Massager"
           }
         },
         "1657510078e5c262af-1": {
@@ -67,8 +67,8 @@
         "1657510078e5c262af-2": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/products\/whole-body-massager-muscle-pain-relief-device"
           }
         }
       },
@@ -78,14 +78,14 @@
         "1657510078e5c262af-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/vc_1.png",
+        "image": "shopify:\/\/shop_images\/vc_2.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
-        "desktop_content_position": "top",
+        "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
-        "content_layout": "overlap",
-        "color_scheme": "background-2",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
         "mobile_content_alignment": "left",
         "padding_top": 0,
         "padding_bottom": 0

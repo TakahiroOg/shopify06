@@ -11,7 +11,7 @@
         "1657475754c396529e-1": {
           "type": "text",
           "settings": {
-            "text": "<p>This New 5-in-1 Whole Body Therapyhelps relieve your neck \/ back waist \/ hip \/ leg and even other parts.Exactly how?It uses<em>4<\/em>different types of massage techniques:shiatsu, kneading, tapping, massage.FREE delivery today only!Relieves muscle pain and inflammation.Extremely effective solution for osteoarthritis.Healthier legs in just 30 days or your money back. No questions asked.<\/p>",
+            "text": "<p>{{ product.metafields.custom.paragraph_1 | metafield_tag }}<\/p>",
             "text_style": "body"
           }
         }
@@ -29,8 +29,8 @@
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 24,
+        "padding_bottom": 24
       }
     },
     "1657476048928c81fd": {
@@ -45,7 +45,7 @@
         "165747604833d36233-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Simply:Adjust to the massage intensity that suits you.Continue to press ON\/ to increase the intensity and OFF to decrease the intensity.You see,our body sometimes hasa tendencyduring repeated effortsto bring us itsshare of muscular pains.Now,recover small temporary discomforts<em>quickly<\/em>with themini portable 5-1 electric therapy, a therapeutic aid forrelieving body, neck and cervical pain.<\/p>",
+            "text": "<p>{{ product.metafields.custom.paragraph_2 | metafield_tag }}<\/p>",
             "text_style": "body"
           }
         }
@@ -64,8 +64,8 @@
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "guarantee": {

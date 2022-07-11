@@ -11,7 +11,7 @@
         "c64ab016-c053-4af8-8bba-f1456135989b": {
           "type": "heading",
           "settings": {
-            "heading": "Powerful Personalized Relief"
+            "heading": "{{ product.metafields.custom.benefit_1.value }}"
           }
         },
         "1657475754c396529e-1": {
@@ -48,7 +48,7 @@
         "165747604833d36233-0": {
           "type": "heading",
           "settings": {
-            "heading": "Relieve Muscle Discomfort, Activate Muscle Pressure, And Achieve A Soothing Effect..."
+            "heading": "{{ product.metafields.custom.benefit_2.value }}"
           }
         },
         "165747604833d36233-1": {
@@ -79,6 +79,50 @@
         "padding_bottom": 36
       }
     },
+    "1657547639eba3c580": {
+      "type": "image-with-text",
+      "blocks": {
+        "1657547639e0279b9d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.benefit_3.value }}"
+          }
+        },
+        "1657547639e0279b9d-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.paragraph_3.value }}<\/p>",
+            "text_style": "body"
+          }
+        },
+        "1657547639e0279b9d-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1657547639e0279b9d-0",
+        "1657547639e0279b9d-1",
+        "1657547639e0279b9d-2"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "big_header": true,
+        "mobile_reverse": false,
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "guarantee": {
       "type": "guarantee",
       "settings": {
@@ -92,6 +136,7 @@
     "main",
     "165747575581a00aed",
     "1657476048928c81fd",
+    "1657547639eba3c580",
     "guarantee"
   ]
 }

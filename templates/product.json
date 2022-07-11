@@ -2,7 +2,8 @@
   "sections": {
     "main": {
       "type": "main-product-2",
-      "settings": {}
+      "settings": {
+      }
     },
     "165747575581a00aed": {
       "type": "image-with-text",
@@ -10,14 +11,16 @@
         "1657475754c396529e-1": {
           "type": "text",
           "settings": {
-            "text": "<p>This New 5-in-1 Whole Body Therapyhelps relieve your neck / back waist / hip / leg and even other parts.Exactly how?It uses<em>4</em>different types of massage techniques:shiatsu, kneading, tapping, massage.FREE delivery today only!Relieves muscle pain and inflammation.Extremely effective solution for osteoarthritis.Healthier legs in just 30 days or your money back. No questions asked.</p>",
+            "text": "<p>This New 5-in-1 Whole Body Therapyhelps relieve your neck \/ back waist \/ hip \/ leg and even other parts.Exactly how?It uses<em>4<\/em>different types of massage techniques:shiatsu, kneading, tapping, massage.FREE delivery today only!Relieves muscle pain and inflammation.Extremely effective solution for osteoarthritis.Healthier legs in just 30 days or your money back. No questions asked.<\/p>",
             "text_style": "body"
           }
         }
       },
-      "block_order": ["1657475754c396529e-1"],
+      "block_order": [
+        "1657475754c396529e-1"
+      ],
       "settings": {
-        "image": "shopify://shop_images/2.gif",
+        "image": "shopify:\/\/shop_images\/2.gif",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -43,14 +46,17 @@
         "165747604833d36233-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Simply:Adjust to the massage intensity that suits you.Continue to press ON/ to increase the intensity and OFF to decrease the intensity.You see,our body sometimes hasa tendencyduring repeated effortsto bring us itsshare of muscular pains.Now,recover small temporary discomforts<em>quickly</em>with themini portable 5-1 electric therapy, a therapeutic aid forrelieving body, neck and cervical pain.</p>",
+            "text": "<p>Simply:Adjust to the massage intensity that suits you.Continue to press ON\/ to increase the intensity and OFF to decrease the intensity.You see,our body sometimes hasa tendencyduring repeated effortsto bring us itsshare of muscular pains.Now,recover small temporary discomforts<em>quickly<\/em>with themini portable 5-1 electric therapy, a therapeutic aid forrelieving body, neck and cervical pain.<\/p>",
             "text_style": "body"
           }
         }
       },
-      "block_order": ["165747604833d36233-0", "165747604833d36233-1"],
+      "block_order": [
+        "165747604833d36233-0",
+        "165747604833d36233-1"
+      ],
       "settings": {
-        "image": "shopify://shop_images/7.gif",
+        "image": "shopify:\/\/shop_images\/7.gif",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -65,8 +71,15 @@
     },
     "guarantee": {
       "type": "guarantee",
-      "settings": {}
+      "settings": {
+        "gt_image": "shopify:\/\/shop_images\/2.jpg"
+      }
     }
   },
-  "order": ["main", "165747575581a00aed", "1657476048928c81fd", "guarantee"]
+  "order": [
+    "main",
+    "165747575581a00aed",
+    "1657476048928c81fd",
+    "guarantee"
+  ]
 }

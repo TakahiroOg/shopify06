@@ -1,5 +1,7 @@
 .product-guarantee {
-  padding: 40px 0;
+  padding-top: 20px;
+  margin-top: 20px;
+  position: relative;
 }
 .gt-badge img {
   max-width: 160px;
@@ -9,14 +11,10 @@
 .gt-desc {
   line-height: 1.25;
 }
-.product-guarantee {
-  position: relative;
-}
 .gt-background {
   position: absolute;
   right: 0;
   top: 0;
-  height: 100%;
   opacity: 70%;
   z-index: -10;
 }
@@ -31,12 +29,13 @@
   .gt-badge {
     flex: 0 0 20%;
   }
+  .gt-background {
+    height: 100%;
+  }
 }
 @media screen and (max-width: 749px) {
   .gt-background {
-    margin-top: -88px;
-    position: relative;
-    opacity: 50%;
+    opacity: 40%;
   }
   .gt-content {
     flex: 0 0 60%;

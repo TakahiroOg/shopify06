@@ -11,7 +11,7 @@
         "1657475754c396529e-1": {
           "type": "text",
           "settings": {
-            "text": "<p>product.metafields.custom.paragraph_1&rcub;&rcub;<\/p>",
+            "text": "<p>{{ product.metafields.custom.paragraph_1.value }}<\/p>",
             "text_style": "body"
           }
         }

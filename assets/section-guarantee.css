@@ -31,9 +31,6 @@
   .gt-badge {
     flex: 0 0 20%;
   }
-  .gt-desc {
-    color: #000;
-  }
 }
 @media screen and (max-width: 749px) {
   .gt-background {

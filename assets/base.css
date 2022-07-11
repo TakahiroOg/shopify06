@@ -15,8 +15,9 @@
 
 .color-inverse {
   --color-foreground: var(--color-base-background-1);
-  --color-background: var(--color-base-text);
+  --color-background: var(--color-base-background-3);
   --gradient-background: rgb(var(--color-base-text));
+  --color-base-accent-1: var(--color-base-background-1);
 }
 
 .color-accent-1 {
@@ -285,7 +286,7 @@ body,
 .color-inverse,
 .color-accent-1,
 .color-accent-2 {
-  color: #303036;
+  color: rgba(var(--color-foreground));
   background-color: rgb(var(--color-background));
 }
 
@@ -385,7 +386,7 @@ h5,
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   /* letter-spacing: calc(var(--font-heading-scale) * 0.06rem); */
-  color: rgb(var(--color-foreground));
+  color: rgb(var(--color-base-accent-1));
   line-height: 1.2;
   word-break: break-word;
 }

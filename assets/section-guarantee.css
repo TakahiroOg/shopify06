@@ -1,0 +1,57 @@
+.product-guarantee {
+  padding: 40px 0;
+}
+.gt-badge img {
+  max-width: 160px;
+  display: block;
+  margin: auto;
+}
+.gt-desc {
+  line-height: 1.25;
+}
+.product-guarantee {
+  position: relative;
+}
+.gt-background {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  opacity: 70%;
+  z-index: -10;
+}
+@media screen and (min-width: 750px) {
+  .product-guarantee {
+    display: flex;
+    align-items: center;
+  }
+  .gt-content {
+    flex: 0 0 60%;
+  }
+  .gt-badge {
+    flex: 0 0 20%;
+  }
+  .gt-desc {
+    color: #000;
+  }
+}
+@media screen and (max-width: 749px) {
+  .gt-background {
+    margin-top: -88px;
+    position: relative;
+    opacity: 50%;
+  }
+  .gt-content {
+    flex: 0 0 60%;
+    padding: 0 20px;
+  }
+  .gt-header {
+    text-align: center;
+  }
+  .gt-badge img {
+    max-width: 100px;
+  }
+  .product-guarantee {
+    padding-bottom: 0;
+  }
+}

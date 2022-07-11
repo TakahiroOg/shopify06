@@ -384,7 +384,7 @@ h5,
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
-  letter-spacing: calc(var(--font-heading-scale) * 0.06rem);
+  /* letter-spacing: calc(var(--font-heading-scale) * 0.06rem); */
   color: rgb(var(--color-foreground));
   line-height: 1.2;
   word-break: break-word;
@@ -1214,7 +1214,7 @@ summary::-webkit-details-marker {
 }
 
 .media > img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
   transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }

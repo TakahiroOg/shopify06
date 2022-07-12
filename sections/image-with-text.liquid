@@ -59,7 +59,7 @@
             height="{{ section.settings.image.height }}"
           >
         {% elsif section.settings.is_video %}
-          <video autoplay loop muted webkit-playsinline playsinline class="media-tile__media__video" width="400" height="400"><source src="{{ product.metafields.custom.video1 }}" type="video/mp4"></video>
+          <video autoplay loop muted webkit-playsinline playsinline class="media-tile__media__video" width="400" height="400"><source src="{{ product.metafields.custom.video1 | file_url  }}" type="video/mp4"></video>
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}

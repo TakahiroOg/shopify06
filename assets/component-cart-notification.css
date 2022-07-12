@@ -96,6 +96,7 @@
 
 .cart-notification-product__image {
 /*   display: inline-flex; */
+  position: relative;
   margin-right: 1.5rem;
   margin-top: 0.5rem;
 }

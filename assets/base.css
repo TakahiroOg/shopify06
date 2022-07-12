@@ -60,7 +60,7 @@
 
 :root,
 .color-background-1 {
-  --color-button: var(--color-base-accent-1);
+  --color-button: var(--color-base-accent-2);
   --color-button-text: var(--color-base-solid-button-labels);
   --alpha-button-background: 1;
   --alpha-button-border: 1;

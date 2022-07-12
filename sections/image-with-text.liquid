@@ -58,6 +58,8 @@
             width="{{ section.settings.image.width }}"
             height="{{ section.settings.image.height }}"
           >
+        {% elsif section.settings.is_video %}
+          <video autoplay loop muted webkit-playsinline playsinline class="media-tile__media__video" width="400" height="400"><source src="{{ product.metafields.custom.video1 }}" type="video/mp4"></video>
         {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
@@ -144,6 +146,12 @@
       "type": "checkbox",
       "id": "mobile_reverse",
       "label": "Mobile reverse",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "is_video",
+      "label": "video",
       "default": false
     },
     {

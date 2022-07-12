@@ -65,7 +65,7 @@
         "165747604833d36233-1"
       ],
       "settings": {
-        "height": "small",
+        "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "big_header": false,

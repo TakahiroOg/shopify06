@@ -97,6 +97,10 @@
     "predictive_search_show_price": false,
     "currency_code_enabled": false,
     "cart_type": "drawer",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Ease.png",
+    "checkout_logo_size": "small",
+    "checkout_accent_color": "#0088e2",
+    "checkout_button_color": "#0088e2",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",

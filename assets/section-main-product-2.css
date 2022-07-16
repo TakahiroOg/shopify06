@@ -222,6 +222,14 @@ input[type="radio"]:checked + label {
   margin-bottom: 10px;
   font-style: italic;
 }
+.verify {
+  display: flex;
+  align-items: center;
+}
+.verify span {
+  padding-left: 2px;
+  color: #038848;
+}
 .review-card {
   max-width: 400px;
   padding: 5px;

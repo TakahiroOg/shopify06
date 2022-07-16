@@ -1129,4 +1129,5 @@ $(document).ready(function () {
     arrows: false,
     focusOnSelect: true,
   });
+  $(".slide-placeholder").css("display", "none");
 });

@@ -125,6 +125,26 @@
         "gt-badge": "shopify:\/\/shop_images\/badge.png",
         "gt-description": "<p>We stand behind the effectiveness of this product that's why we're giving you the chance to try it risk-free for the next 60 days. You're going to love how the treated area feels after each session, or you get your money back. Other than those aches and pains that you've been dealing with, you have nothing to lose by trying this product.<\/p>"
       }
+    },
+    "loox-product-reviews-app-section": {
+      "type": "apps",
+      "blocks": {
+        "loox-product-reviews": {
+          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "aggregated": false,
+            "hide_thumbnails": false,
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "loox-product-reviews"
+      ],
+      "settings": {
+        "include_margins": false
+      }
     }
   },
   "order": [
@@ -132,6 +152,7 @@
     "165747575581a00aed",
     "1657476048928c81fd",
     "1657547639eba3c580",
-    "guarantee"
+    "guarantee",
+    "loox-product-reviews-app-section"
   ]
 }

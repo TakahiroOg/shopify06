@@ -115,15 +115,7 @@
         "color_scheme": "background-1",
         "mobile_content_alignment": "left",
         "padding_top": 0,
-        "padding_bottom": 20
-      }
-    },
-    "guarantee": {
-      "type": "guarantee",
-      "settings": {
-        "gt_image": "shopify:\/\/shop_images\/2.jpg",
-        "gt-badge": "shopify:\/\/shop_images\/badge.png",
-        "gt-description": "<p>We stand behind the effectiveness of this product that's why we're giving you the chance to try it risk-free for the next 60 days. You're going to love how the treated area feels after each session, or you get your money back. Other than those aches and pains that you've been dealing with, you have nothing to lose by trying this product.<\/p>"
+        "padding_bottom": 0
       }
     },
     "loox-product-reviews-app-section": {
@@ -145,6 +137,14 @@
       "settings": {
         "include_margins": false
       }
+    },
+    "guarantee": {
+      "type": "guarantee",
+      "settings": {
+        "gt_image": "shopify:\/\/shop_images\/2.jpg",
+        "gt-badge": "shopify:\/\/shop_images\/badge.png",
+        "gt-description": "<p>We stand behind the effectiveness of this product that's why we're giving you the chance to try it risk-free for the next 60 days. You're going to love how the treated area feels after each session, or you get your money back. Other than those aches and pains that you've been dealing with, you have nothing to lose by trying this product.<\/p>"
+      }
     }
   },
   "order": [
@@ -152,7 +152,7 @@
     "165747575581a00aed",
     "1657476048928c81fd",
     "1657547639eba3c580",
-    "guarantee",
-    "loox-product-reviews-app-section"
+    "loox-product-reviews-app-section",
+    "guarantee"
   ]
 }

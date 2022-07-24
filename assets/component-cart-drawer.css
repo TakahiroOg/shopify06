@@ -312,6 +312,7 @@ cart-drawer-items {
 
 .cart-drawer .totals {
   justify-content: space-between;
+  margin-bottom: 1.2rem;
 }
 
 .cart-drawer .price {

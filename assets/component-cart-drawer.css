@@ -118,8 +118,6 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   background-color: rgb(var(--color-background));
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.2);
   padding: 1.5rem 0;
-  position:fixed;
-  bottom:0;
   z-index:10;
 }
 
@@ -197,7 +195,7 @@ cart-drawer {
 }
 
 cart-drawer-items {
-  overflow: auto !important;
+  overflow: hidden auto !important;
   flex: 1;
 }
 

@@ -2,7 +2,7 @@
   {{ 'section-cta.css' | asset_url | stylesheet_tag }}
   {%- assign product_form_id = 'product-form-' | append: section.id -%}
   <div class="container">
-    <div class="cta">
+    <div class="cta-wrapper">
       <div class="cta-button">
         <div {{ block.shopify_attributes }}>
           <product-form class="product-form">
@@ -11,7 +11,7 @@
             <div class="b-get-btn">
               <button type="submit" name="add" class="get-btn"
                 {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}>
-          <span>ADD TO CART</span>
+          <span>GET YOURS TODAY</span>
           <div class="loading-overlay__spinner hidden">
             <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66"
               xmlns="http://www.w3.org/2000/svg">

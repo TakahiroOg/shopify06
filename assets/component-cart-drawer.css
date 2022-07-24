@@ -120,6 +120,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   padding: 1.5rem 0;
   position:fixed;
   bottom:0;
+  z-index:10;
 }
 
 cart-drawer-items.is-empty + .drawer__footer {

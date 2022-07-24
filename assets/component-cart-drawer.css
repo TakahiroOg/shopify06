@@ -197,14 +197,14 @@ cart-drawer {
 }
 
 cart-drawer-items {
-  overflow: auto;
+  overflow: auto !important;
   flex: 1;
 }
 
-@media screen and (max-height: 650px) {
+/* @media screen and (max-height: 650px) {
   cart-drawer-items {
     overflow: visible;
-  }
+  } */
 
   .drawer__inner {
     overflow: scroll;

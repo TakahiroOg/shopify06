@@ -319,11 +319,6 @@ cart-drawer-items {
   line-height: 1;
 }
 
-.cart-drawer .tax-note {
-  margin: 1.2rem 0 1rem auto;
-  text-align: left;
-}
-
 .cart-drawer .product-option dd {
   word-break: break-word;
 }

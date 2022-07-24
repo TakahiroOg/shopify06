@@ -117,6 +117,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   background-color: rgb(var(--color-background));
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.2);
   padding: 1.5rem 0;
+  z-index:10;
 }
 
 cart-drawer-items.is-empty + .drawer__footer {
@@ -193,14 +194,9 @@ cart-drawer {
 }
 
 cart-drawer-items {
-  overflow: auto;
+  overflow: hidden auto;
   flex: 1;
 }
-
-@media screen and (max-height: 650px) {
-  cart-drawer-items {
-    overflow: visible;
-  }
 
   .drawer__inner {
     overflow: scroll;

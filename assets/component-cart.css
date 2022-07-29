@@ -221,9 +221,4 @@ cart-items {
   [data-shopify-buttoncontainer] {
     justify-content: flex-end;
   }
-
-  .cart__ctas {
-    display: flex;
-    gap: 1rem;
-  }
 }

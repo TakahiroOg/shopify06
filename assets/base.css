@@ -2978,7 +2978,7 @@ img {
 .thumb .slick-initialized {
   display: block;
 }
-.b-get-btn button {
+.get-btn {
   color: #fff;
   font-weight: 700;
   font-size: 18px;

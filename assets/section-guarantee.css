@@ -37,9 +37,6 @@
   }
 }
 @media screen and (max-width: 749px) {
-  .gt-background {
-    opacity: 40%;
-  }
   .gt-content {
     flex: 0 0 60%;
     padding: 0 20px;
@@ -49,5 +46,10 @@
   }
   .product-guarantee {
     padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 989px) {
+    .gt-background {
+    opacity: 40%;
   }
 }

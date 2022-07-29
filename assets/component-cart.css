@@ -197,6 +197,7 @@ cart-items {
   border-radius: 5px;
   background-color: #00c065;
   border: 1px solid #00c065;
+  box-shadow: none;
 }
 
 .cart__ctas {

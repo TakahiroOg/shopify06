@@ -6,7 +6,7 @@
   <div class="container">
     <div class="product-main row">
       <div class="only-on-mobile">
-        <h1 class="product-headline">{{product.metafields.custom.headline}}</h1>
+        <h1 class="product-headline">{{ product.metafields.custom.headline }}</h1>
       </div>
       <div class="product-gallery">
         <div class="slide-placeholder">
@@ -22,7 +22,7 @@
             endif
           -%}
         <div class="slider product-img">
-          {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'  -%}
+          {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
           {%- for media in product.media -%}
             {%- liquid
                 if variant_images contains media.src
@@ -53,9 +53,9 @@
       </div>
       <div class="product-info">
         <div class="mobile-hide">
-         <h1 class="product-headline">{{product.metafields.custom.headline}}</h1>
+         <h1 class="product-headline">{{ product.metafields.custom.headline }}</h1>
         </div>
-        <div class="product-subtitle">{{product.metafields.custom.product_subtitle}}</div>
+        <div class="product-subtitle">{{ product.metafields.custom.product_subtitle }}</div>
 
         <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
           {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
@@ -149,7 +149,7 @@
               <span class="review">{{ product.metafields.custom.review }}</span>
               <strong class="name">Walter C.</strong>
               <div class="verify">
-                <img src="{{ 'check.png' | asset_url  }}" width="12" height="12" alt="">
+                <img src="{{ 'check.png' | asset_url }}" width="12" height="12" alt="">
                 <span>Verified Buyer</span>
               </div>
             </div>

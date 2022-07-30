@@ -9,47 +9,47 @@
         <h1 class="product-headline">{{ product.metafields.custom.headline }}</h1>
       </div>
       <div class="product-gallery">
-        <div class="slide-placeholder">
-          <img src="{{ product.media.first | img_url: 'master' }}">
-        </div>
-        <media-gallery id="MediaGallery-{{ section.id }}" role="region" {% if section.settings.enable_sticky_info %}class="product__media-gallery"{% endif %} aria-label="{{ 'products.product.media.gallery_viewer' | t }}" data-desktop-layout="{{ section.settings.gallery_layout }}">
-          <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
-          {%- liquid
-            assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
-            assign media_count = product.media.size
-            if section.settings.hide_variants and media_count > 1
-              assign media_count = media_count | minus: variant_images.size | plus: 1
-            endif
-          -%}
-        <div class="slider product-img">
-          {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
+        {% if product.images != null %}
+          <div class="carousel product__image-slider is-hidden" role="document" aria-label="{{ 'products.modal.label' | t }}" tabindex="0">
           {%- for media in product.media -%}
-            {%- liquid
-                if variant_images contains media.src
-                  assign variant_image = true
-                else
-                  assign variant_image = false
-                endif
-            -%}
-            <div id="Slide-{{ section.id }}-{{ media.id }}" class="product__media-item grid__item slider__slide {% if variant_image %}hide-variant{% endif %}" data-media-id="{{ media.id }}">
-              <img src="{{ media | img_url: 'master' }}" loading="lazy">
-            </div>
+          <div class="carousel-cell">
+          {% if media.media_type == "video" %}
+          {{ media | media_tag: image_size: "720x", autoplay: true, loop: loop, controls: true, preload: "none", autoplay: true, height: "100%", width: "100%" }}
+          {% else %}
+          <img data-flickity-lazyload-srcset="
+          {{ media | img_url: '1440x' }} 1440w,
+          {{ media | img_url: '1080x' }} 1080w,
+          {{ media | img_url: '720x' }} 767w,
+          {{ media | img_url: '480x' }} 480w"
+          sizes="(min-width: 480px) 1440px, 1080px, 767px, 480px"
+          data-flickity-lazyload-src="{{ media | img_url: 'master' }}"
+          alt="{{ media.alt | escape }}"
+          border="0"
+          data-media-id="{{ media.id }}" />
+          {% endif %}
+          </div>
           {%- endfor -%}
-        </div>
-        <div class="preview">
-          {% for media in product.media %}
-            {%- liquid
-                if variant_images contains media.src
-                  assign variant_image = true
-                else
-                  assign variant_image = false
-                endif
-            -%}
-            <div class="thumb">
-             <img src="{{ media | img_url: 'master' }}" loading="lazy">
-            </div>
-          {% endfor %}
-        </div> 
+          </div>
+          {% if product.images.size > 1 %}
+          <div class="carousel product__image-thumbnail">
+          {%- for media in product.media -%}
+          <div class="carousel-cell">
+          <img data-flickity-lazyload-srcset="
+          {{ media | img_url: '1440x' }} 1440w,
+          {{ media | img_url: '1080x' }} 1080w,
+          {{ media | img_url: '720x' }} 767w,
+          {{ media | img_url: '480x' }} 480w"
+          sizes="(min-width: 480px) 1440px, 1080px, 767px, 480px"
+          data-flickity-lazyload-src="{{ media | img_url: 'master' }}"
+          border="0"
+          data-media-id="{{ media_id }}" />
+          </div>
+          {%- endfor -%}
+          </div>
+          {% endif %}
+          {% else %}
+          {{ 'product-1' | placeholder_svg_tag }}
+          {% endif %}
       </div>
       <div class="product-info">
         <div class="mobile-hide">
@@ -160,3 +160,24 @@
     </div>
   </div>
 </section>
+<script>
+  var elem = document.querySelector('.carousel.product__image-slider');
+  var flkty = new Flickity( elem, {
+  contain: true,
+  imagesLoaded: true,
+  lazyLoad: 1,
+  wrapAround: true,
+  pageDots: false,
+  prevNextButtons: false,
+  adaptiveHeight: true
+  });
+  var elemThumbnail = document.querySelector('.carousel.product__image-thumbnail');
+  var flktyB = new Flickity( elemThumbnail, {
+  asNavFor: '.carousel.product__image-slider',
+  contain: true,
+  imagesLoaded: true,
+  lazyLoad: 4,
+  pageDots: false,
+  prevNextButtons: false
+  });
+  </script>

@@ -797,13 +797,6 @@ summary::-webkit-details-marker {
   box-shadow: none;
 }
 
-*:focus-visible {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-  outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-}
-
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
 .focused,
 .no-js *:focus {
@@ -2970,14 +2963,7 @@ fieldset {
 img {
   max-width: 100%;
 }
-.product-img,
-.thumb {
-  display: none;
-}
-.product-img .slick-initialized,
-.thumb .slick-initialized {
-  display: block;
-}
+
 .get-btn {
   color: #fff;
   font-weight: 700;
@@ -2994,4 +2980,41 @@ img {
 }
 .get-btn {
   position: relative;
+}
+
+/* Flickity Slider */
+.product__image-slider {
+  width: 100%;
+}
+.product__image-slider .carousel-cell {
+  width: 100%;
+  height: auto;
+  margin: 0 5px;
+}
+.product__image-slider .carousel-cell img {
+  width: 100%;
+  height: 100%;
+}
+.grid__item .product__image-slider {
+  margin-bottom: 2rem;
+}
+.product__image-slider .flickity-viewport {
+  transition: height 0.2s;
+}
+.flickity-button:disabled {
+  display: none;
+}
+.product__image-thumbnail .carousel-cell {
+  width: 15%;
+  margin-right: 5px;
+}
+.product__image-thumbnail .carousel-cell img {
+  width: 100%;
+  height: 100%;
+}
+.carousel {
+  opacity: 0;
+}
+.carousel.flickity-enabled {
+  opacity: 1;
 }

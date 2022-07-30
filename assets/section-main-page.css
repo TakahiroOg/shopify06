@@ -3,7 +3,14 @@
 }
 
 .main-page-title {
-  margin-bottom: 3rem;
+    margin-bottom: 3rem;
+    font-size: 26px;
+    line-height: 33px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: .5px;
+    margin-top: 0;
+    text-align: center;
 }
 
 .track_form {

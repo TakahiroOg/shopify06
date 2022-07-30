@@ -38,7 +38,7 @@
     line-height: inherit;
     padding: 0 36px;
     border-radius: 0;
-    background-color: rgb(var(--color-button);
+    background: rgba(var(--color-button), var(--alpha-button-background));
     color: #fff;
     border: 1px solid #cccccc;
 }

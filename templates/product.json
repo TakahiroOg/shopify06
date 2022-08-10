@@ -2,7 +2,8 @@
   "sections": {
     "main": {
       "type": "main-product-2",
-      "settings": {}
+      "settings": {
+      }
     },
     "165747575581a00aed": {
       "type": "image-with-text",
@@ -16,7 +17,7 @@
         "1657475754c396529e-1": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ product.metafields.custom.paragraph_1.value }}</p>",
+            "text": "<p>{{ product.metafields.custom.paragraph_1.value }}<\/p>",
             "text_style": "body"
           }
         }
@@ -26,7 +27,7 @@
         "1657475754c396529e-1"
       ],
       "settings": {
-        "image": "shopify://shop_images/2.gif",
+        "image": "shopify:\/\/shop_images\/2.gif",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -54,12 +55,15 @@
         "165747604833d36233-1": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ product.metafields.custom.paragraph_2.value }}</p>",
+            "text": "<p>{{ product.metafields.custom.paragraph_2.value }}<\/p>",
             "text_style": "body"
           }
         }
       },
-      "block_order": ["165747604833d36233-0", "165747604833d36233-1"],
+      "block_order": [
+        "165747604833d36233-0",
+        "165747604833d36233-1"
+      ],
       "settings": {
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -88,14 +92,17 @@
         "1657547639e0279b9d-1": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ product.metafields.custom.paragraph_3.value }}</p>",
+            "text": "<p>{{ product.metafields.custom.paragraph_3.value }}<\/p>",
             "text_style": "body"
           }
         }
       },
-      "block_order": ["1657547639e0279b9d-0", "1657547639e0279b9d-1"],
+      "block_order": [
+        "1657547639e0279b9d-0",
+        "1657547639e0279b9d-1"
+      ],
       "settings": {
-        "image": "shopify://shop_images/portable.jpg",
+        "image": "shopify:\/\/shop_images\/20.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -111,11 +118,16 @@
         "padding_bottom": 0
       }
     },
+    "cta": {
+      "type": "cta",
+      "settings": {
+      }
+    },
     "loox-product-reviews-app-section": {
       "type": "apps",
       "blocks": {
         "loox-product-reviews": {
-          "type": "shopify://apps/loox-product-reviews-photos/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "type": "shopify:\/\/apps\/loox-product-reviews-photos\/blocks\/loox-dynamic-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
             "only_photos": false,
             "aggregated": false,
@@ -124,21 +136,19 @@
           }
         }
       },
-      "block_order": ["loox-product-reviews"],
+      "block_order": [
+        "loox-product-reviews"
+      ],
       "settings": {
         "include_margins": false
       }
     },
-    "cta": {
-      "type": "cta",
-      "settings": {}
-    },
     "guarantee": {
       "type": "guarantee",
       "settings": {
-        "gt_image": "shopify://shop_images/2.jpg",
-        "gt-badge": "shopify://shop_images/badge.png",
-        "gt-description": "<p>We stand behind the effectiveness of this product that's why we're giving you the chance to try it risk-free for the next 60 days. You're going to love how the treated area feels after each session, or you get your money back. Other than those aches and pains that you've been dealing with, you have nothing to lose by trying this product.</p>"
+        "gt_image": "shopify:\/\/shop_images\/2.jpg",
+        "gt-badge": "shopify:\/\/shop_images\/badge.png",
+        "gt-description": "<p>We stand behind the effectiveness of this product that's why we're giving you the chance to try it risk-free for the next 60 days. You're going to love how the treated area feels after each session, or you get your money back. Other than those aches and pains that you've been dealing with, you have nothing to lose by trying this product.<\/p>"
       }
     }
   },

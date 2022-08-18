@@ -6,7 +6,9 @@
 {% endcomment %}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
-
+{%- if template.name != 'product' -%}
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
 <style>
   .drawer {
     visibility: hidden;
@@ -248,6 +250,59 @@
           </div>
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
+        <!-- cart addon -->
+        {%- unless cart == empty -%}
+        {%- assign product = settings.cart_drawer_product -%}
+        
+        <div class="addon_section">
+          <div class="cart_addon_outer">
+            <div class="cart_addon_header">
+              <h3> Special Offers </h3>  
+            </div>                                                       
+            <div class="AddonItem__Row__Outerslider_addon">
+              <div class=" AddonItem__Row ">
+                <div class="CartItem cart_item">
+                  <div class="CartItem__ImageWrapper">
+                    <img class="CartItem__Image cart_image" src="{{ product.featured_image | image_url: width: 300 }}" loading="lazy">
+                  </div>
+                  <div class="main_cartitem_price">
+                    <div class="CartItem__Info__main">                
+                      <div class="CartItem__Info">    
+                        <h2 class="CartItem__Title">
+                          <a class="link_pro" href="{{ product.url }}">{{ product.title | escape }}</a>
+                        </h2>
+                        <div class="cartItem__desc">
+                          Reusable Self-Adhesive replacement electrode pads for Whole Body Massager.
+                        </div>
+                      </div>   
+                    </div>
+                    <div class="cart_price_addbtn">
+                      <span class="CartItem__Price Price" data-money-convertible="">$25</span> 
+                      <product-form class="product-form">
+                        {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
+                          <div class="">
+                            <button type="submit" name="add" class="addon_atc">
+                                <span>+ Add</span>
+                            </button>
+                            <div class="loading-overlay__spinner hidden" style="display:none !important;">
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                              </svg>
+                            </div>
+                          </div>
+                        {%- endform -%}
+                      </product-form>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {%- endunless -%}
+        <!-- end here -->
       </cart-drawer-items>
       <div class="drawer__footer">
         {%- if settings.show_cart_note -%}

@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-3",
+      "settings": {}
+    },
+    "cta": {
+      "type": "cta",
+      "settings": {}
+    }
+  },
+  "order": ["main", "cta"]
+}

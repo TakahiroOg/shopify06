@@ -2050,6 +2050,9 @@ input[type="checkbox"] {
 .quantity__input:focus-visible {
   background-color: rgb(var(--color-background));
   z-index: 2;
+  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
+    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 .quantity__button:focus,
@@ -3016,5 +3019,14 @@ img {
   opacity: 0;
 }
 .carousel.flickity-enabled {
+  opacity: 1;
+}
+/* fade in image when loaded */
+.fade-in {
+  transition: opacity 1s linear;
+  opacity: 0;
+}
+
+.fade-in.flickity-lazyloaded {
   opacity: 1;
 }

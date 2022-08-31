@@ -136,14 +136,14 @@
                 <span class="safe-checkout">GUARANTEED SAFE CHECKOUT</span>
               </div>
               <div class="payment-logo-wrapper">
-                <img class="payment-logos" src="https://cdn.shopify.com/s/files/1/0555/1774/1228/files/payment-logo.png?v=1655214307">
+                <img class="payment-logos" src="{{ settings.payment_logo | image_url: width: 480 }}">
               </div>
             </div>
           </div>
 
           <div class="review-card row">
             <div class="review-img">
-              <img src="{{ '3.jpeg' | asset_url }}" alt="">
+              <img src="{{ section.settings.review-img | image_url: width: 360 }}" alt="">
             </div>
             <div class="review-content">
               <span class="review">{{ product.metafields.custom.review }}</span>
@@ -182,3 +182,17 @@
     prevNextButtons: false
   });
   </script>
+
+  {% schema %}
+{
+  "name": "main-product-2",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "review-img",
+      "label": "Review Image"
+    }
+  ]
+}
+{% endschema %}

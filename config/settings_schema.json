@@ -1199,5 +1199,15 @@
         "label": "Product"
       }
     ]
+  },
+  {
+    "name": "Payment Logo",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "payment_logo",
+        "label": "payment logo"
+      }
+    ]
   }
 ]

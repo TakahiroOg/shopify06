@@ -1,0 +1,13 @@
+.product__description {
+  margin-bottom: 30px;
+}
+.product-subtitle a {
+  text-decoration: none;
+  color: rgb(var(--color-base-accent-2));
+}
+@media screen and (max-width: 749px) {
+  .product-title {
+    font-size: 23px;
+    margin: 10px 0;
+  }
+}

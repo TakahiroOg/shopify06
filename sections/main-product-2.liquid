@@ -6,7 +6,7 @@
   <div class="container">
     <div class="product-main row">
       <div class="only-on-mobile">
-        <h1 class="product-headline">{{ product.metafields.custom.headline }}</h1>
+        <h1 class="product-headline">{{ section.settings.headline }}</h1>
       </div>
       <div class="product-gallery">
         {% if product.images != null %}
@@ -53,9 +53,9 @@
       </div>
       <div class="product-info">
         <div class="mobile-hide">
-         <h1 class="product-headline">{{ product.metafields.custom.headline }}</h1>
+         <h1 class="product-headline">{{ section.settings.headline }}</h1>
         </div>
-        <div class="product-subtitle">{{ product.metafields.custom.product_subtitle }}</div>
+        {% if product.metafields.custom.subtitle %}<div class="product-subtitle">{{ product.metafields.custom.subtitle }}</div>{% endif %}
 
         <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
           {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
@@ -101,12 +101,44 @@
                 </div>
               </fieldset>
             {% endif %}
-          {% endfor %}
+            <fieldset class="js product-form__input">
+              <legend class="form__label">
+              <span>{{ option.name }}</span>{% if option.name == "Color" %}<span class="swatch-label">: {{ option.selected_value }}</span>{% endif %}
+              </legend>
+              {%- for value in option.values -%}
+                <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                      name="{{ option.name }}"
+                      value="{{ value | escape }}"
+                      form="{{ product_form_id }}"
+                      {% if option.selected_value == value %}checked{% endif %} class="swatch-options"
+                >
+                  {% assign variant_needed = null %}
+                  {% for variant in product.variants %}
+                  {% if variant.options contains value %}
+                  {% assign variant_needed = variant %}
+                  {% endif %}
+                  {% endfor %}  
+
+                  {% if variant_needed.metafields.color.swatch and option.name == "Color" %}
+                  <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-color: {{variant_needed.metafields.color.swatch}}">
+                    &nbsp
+                  </label>
+                  {% elsif variant_needed.metafields.image.swatch and option.name == "Color" %}
+                  <label class="color-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" data-option="{{ value }}" style="background-size: cover; background-image: url('{{variant_needed.metafields.image.swatch}}')">
+                    &nbsp
+                  </label>
+                  {% else %}
+                  <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                    {{ value }}
+                  </label>
+                  {% endif %}
+              {%- endfor -%}
+            </fieldset>
+        {%- endfor -%}
           <script type="application/json">
             {{ product.variants | json }}
           </script>
         </variant-radios>
-
           <div class="cta">
             <div class="cta-button">
               <div {{ block.shopify_attributes }}>
@@ -147,7 +179,7 @@
             </div>
             <div class="review-content">
               <span class="review">{{ product.metafields.custom.review }}</span>
-              <strong class="name">Walter C.</strong>
+              <strong class="name">{{ section.settings.reviewer }}</strong>
               <div class="verify">
                 <img src="{{ 'check.png' | asset_url }}" width="12" height="12" alt="">
                 <span>Verified Buyer</span>
@@ -192,6 +224,16 @@
       "type": "image_picker",
       "id": "review-img",
       "label": "Review Image"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline"
+    },
+    {
+      "type": "text",
+      "id": "reviewer",
+      "label": "Reviewer"
     }
   ]
 }

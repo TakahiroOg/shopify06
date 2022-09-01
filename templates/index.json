@@ -6,13 +6,13 @@
         "1657510078e5c262af-0": {
           "type": "heading",
           "settings": {
-            "heading": "Get Instant Relief With The Whole Body Massager"
+            "heading": "Watch Your Favorite Content ON THE GO!"
           }
         },
         "1657510078e5c262af-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Don't let pain hold you back from your favorite activities! Our electronic pulse massager eases common pain in your muscles, back, knees, elbow, joints & more.<\/p>",
+            "text": "<p>Whether <strong>watching a nice little movie with your loved ones <\/strong>or<strong> simply playing some games on a bigger immersive screen,<\/strong> you might want to check out our Mini Projector!<\/p>",
             "text_style": "body"
           }
         },
@@ -20,7 +20,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/products\/whole-body-massager-muscle-pain-relief-device"
+            "button_link": ""
           }
         }
       },
@@ -30,12 +30,13 @@
         "1657510078e5c262af-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/vc_2.png",
+        "image": "shopify:\/\/shop_images\/w.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "big_header": true,
         "mobile_reverse": true,
+        "video": "",
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",

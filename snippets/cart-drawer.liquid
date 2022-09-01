@@ -6,7 +6,7 @@
 {% endcomment %}
 
 <script src="{{ 'cart.js' | asset_url }}" defer="defer"></script>
-{%- if template.name != 'product' -%}
+{%- if template.name != 'product' and settings.cart_drawer_product != empty -%}
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 <style>
@@ -251,7 +251,9 @@
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
         <!-- cart addon -->
+        {%- if settings.cart_drawer_product != empty -%}
         {%- unless cart == empty -%}
+
         {%- assign product = settings.cart_drawer_product -%}
         
         <div class="addon_section">
@@ -272,12 +274,12 @@
                           <a class="link_pro" href="{{ product.url }}">{{ product.title | escape }}</a>
                         </h2>
                         <div class="cartItem__desc">
-                          Reusable Self-Adhesive replacement electrode pads for Whole Body Massager.
+                          {{ product.description | truncatewords: 20 }}
                         </div>
                       </div>   
                     </div>
                     <div class="cart_price_addbtn">
-                      <span class="CartItem__Price Price" data-money-convertible="">$25</span> 
+                      <span class="CartItem__Price Price" data-money-convertible="">{{ product.price | money }}</span> 
                       <product-form class="product-form">
                         {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                           <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
@@ -302,6 +304,7 @@
           </div>
         </div>
         {%- endunless -%}
+      {%- endif -%}
         <!-- end here -->
       </cart-drawer-items>
       <div class="drawer__footer">

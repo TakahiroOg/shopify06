@@ -2,10 +2,11 @@
   "current": {
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#000000",
+    "colors_accent_3": "#f7e836",
     "gradient_accent_1": "",
-    "colors_accent_2": "#0088e2",
+    "colors_accent_2": "#00938b",
     "gradient_accent_2": "",
-    "colors_text": "#303036",
+    "colors_text": "#2f4858",
     "colors_outline_button_labels": "#121212",
     "colors_background_1": "#ffffff",
     "gradient_background_1": "",
@@ -97,22 +98,21 @@
     "predictive_search_show_price": false,
     "currency_code_enabled": false,
     "cart_type": "drawer",
-    "cart_drawer_product": "4pcs-replacement-electrode-pads",
-    "checkout_logo_image": "shopify:\/\/shop_images\/Ease.png",
+    "cart_drawer_product": "",
+    "payment_logo": "shopify://shop_images/payment-logo_23dba915-ca7b-4432-8e18-9bce0cc1ada8.png",
+    "checkout_logo_image": "shopify://shop_images/Ease.png",
     "checkout_logo_size": "small",
     "checkout_accent_color": "#0088e2",
     "checkout_button_color": "#0088e2",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "settings": {
-        }
+        "settings": {}
       },
       "header": {
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
-          "logo": "shopify:\/\/shop_images\/Ease.png",
           "logo_width": 120,
           "logo_position": "middle-left",
           "menu": "main-menu",
@@ -135,9 +135,7 @@
             }
           }
         },
-        "block_order": [
-          "footer-0"
-        ],
+        "block_order": ["footer-0"],
         "settings": {
           "color_scheme": "inverse",
           "newsletter_enable": false,
@@ -165,9 +163,7 @@
         }
       }
     },
-    "content_for_index": [
-
-    ]
+    "content_for_index": []
   },
   "presets": {
     "Default": {
@@ -280,11 +276,8 @@
               }
             }
           },
-          "block_order": [
-            "announcement-bar-0"
-          ],
-          "settings": {
-          }
+          "block_order": ["announcement-bar-0"],
+          "settings": {}
         },
         "header": {
           "type": "header",
@@ -319,15 +312,11 @@
               "type": "text",
               "settings": {
                 "heading": "Our mission",
-                "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+                "subtext": "<p>Share contact information, store details, and brand content with your customers.</p>"
               }
             }
           },
-          "block_order": [
-            "footer-0",
-            "footer-1",
-            "footer-2"
-          ],
+          "block_order": ["footer-0", "footer-1", "footer-2"],
           "settings": {
             "color_scheme": "background-1",
             "newsletter_enable": true,

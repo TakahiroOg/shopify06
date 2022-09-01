@@ -3,6 +3,9 @@
     "main": {
       "type": "main-product-2",
       "settings": {
+        "review-img": "{{ product.metafields.custom.reveiw_image.value }}",
+        "headline": "{{ product.metafields.custom.bold_claim.value }}",
+        "reviewer": "Kaleeya C."
       }
     },
     "165747575581a00aed": {
@@ -27,6 +30,88 @@
         "1657475754c396529e-1"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/2.gif",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "big_header": false,
+        "mobile_reverse": false,
+        "video": "",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "1662030481b4dec18b": {
+      "type": "image-with-text",
+      "blocks": {
+        "166203048175f0598d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.benefit_2.value }}"
+          }
+        },
+        "166203048175f0598d-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.paragraph_2 | metafield_tag }}<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "166203048175f0598d-0",
+        "166203048175f0598d-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/4.gif",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "big_header": true,
+        "mobile_reverse": false,
+        "video": "",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "cta": {
+      "type": "cta",
+      "settings": {
+      }
+    },
+    "1662030698bd415938": {
+      "type": "image-with-text",
+      "blocks": {
+        "16620306984929949a-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ product.metafields.custom.benefit_3.value }}"
+          }
+        },
+        "16620306984929949a-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.custom.paragraph_3.value }}<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "16620306984929949a-0",
+        "16620306984929949a-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/9.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -38,33 +123,70 @@
         "content_layout": "no-overlap",
         "color_scheme": "background-1",
         "mobile_content_alignment": "left",
-        "padding_top": 24,
-        "padding_bottom": 24
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "cta": {
+    "cta-2": {
       "type": "cta",
       "settings": {
       }
     },
-    "loox-product-reviews-app-section": {
-      "type": "apps",
+    "1662038396617a63e1": {
+      "type": "image-with-text",
+      "blocks": {
+        "16620383963565da02-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Do You Wish to Be Anywhere in the World?! 🌎"
+          }
+        },
+        "16620383963565da02-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With the MiniProjector™️ you can make your room teleport to anywhere in the world thanks to its \"fake window\" effect! Choose from millions of \"fake window videos\" on YouTube and enjoy a beautiful day in Dubai or a rainy night in London!🪟<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "16620383963565da02-0",
+        "16620383963565da02-1"
+      ],
       "settings": {
-        "include_margins": false
+        "image": "shopify:\/\/shop_images\/5.gif",
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "big_header": false,
+        "mobile_reverse": false,
+        "video": "",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "guarantee": {
       "type": "guarantee",
       "settings": {
-        "gt-description": "<p>We stand behind the effectiveness of this product that's why we're giving you the chance to try it risk-free for the next 60 days. You're going to love how the treated area feels after each session, or you get your money back. Other than those aches and pains that you've been dealing with, you have nothing to lose by trying this product.<\/p>"
+        "gt_image": "shopify:\/\/shop_images\/Untitled_design_33d57982-a690-45f9-9618-901aa33e295f.png",
+        "gt-badge": "shopify:\/\/shop_images\/Untitled_design_1.png",
+        "gt-description": "<p>We stand behind the quality of this product that's why we're giving you the chance to try it risk-free for the next 60 days. <\/p>"
       }
     }
   },
   "order": [
     "main",
     "165747575581a00aed",
+    "1662030481b4dec18b",
     "cta",
-    "loox-product-reviews-app-section",
+    "1662030698bd415938",
+    "cta-2",
+    "1662038396617a63e1",
     "guarantee"
   ]
 }

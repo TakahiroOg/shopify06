@@ -100,7 +100,7 @@
                   {%- endfor -%}
                 </div>
               </fieldset>
-            {% endif %}
+            {% else %}
             <fieldset class="js product-form__input">
               <legend class="form__label">
               <span>{{ option.name }}</span>{% if option.name == "Color" %}<span class="swatch-label">: {{ option.selected_value }}</span>{% endif %}
@@ -134,6 +134,7 @@
                   {% endif %}
               {%- endfor -%}
             </fieldset>
+          {% endif %}
         {%- endfor -%}
           <script type="application/json">
             {{ product.variants | json }}
